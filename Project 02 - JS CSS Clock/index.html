@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <meta name="author" content="sean becker - rabbitWerks">
+  <meta name="description" content="RabbitWerks Project : Wes Bos Javascript30 Project 02 - JS + CSS Clock">
+  <meta name="keywords" content="techtronix web, javascript, 30, rabbitwerks, sean becker, js clock, js, css3,  web design, development, programming">
+
+
+  <title>JS + CSS Clock</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+  <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#29a480">
+  <link rel="shortcut icon" href="favicon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#00aba9">
+  <meta name="msapplication-config" content="favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+
+
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+  <div id="edit-name">
+    <a href="#" id="edit-btn"><span id="edit-btn-content">edit name</span></a>
+    <input type="text" name="edit-input" id="edit-input">
+    <div id="confirm"><i class="fa fa-check"></i></div>
+  </div>
+
+  <div id="greeting"> <!--set init greet and return greet-->
+    <h4 id="init-greet-message">hi there, please enter your name...</h4>
+    <h4 id="return-greet-message">...</h4>
+    <input type="text" id="name" class="greet-input" autocomplete="off" autofocus>
+    <h4 class="greet-output">&nbsp;</h4>
+    <button id="submit-name">submit</button>
+  </div>
+
+  <div class="clock">
+    <div class="clock-face">
+      <div class="hand hour-hand"></div>
+      <div class="hand min-hand"></div>
+      <div class="hand second-hand"></div>
+      <div class="clock-center"></div>
+      <div class="clock-middle"></div>
+      <div class="circle-1"></div>
+      <div class="circle-2"></div>
+      <div class="circle-3"></div>
+      <div class="circle-4"></div>
+      <div class="circle-5"></div>
+      <div class="circle-6"></div>
+    </div>
+  </div>
+
+  <div class="time">
+    <h3 id="timeDisplay">the time is</h3>
+  </div>
+
+
+  <style>
+    
+  </style>
+<script src="app.js"></script>
+</body>
+</html>

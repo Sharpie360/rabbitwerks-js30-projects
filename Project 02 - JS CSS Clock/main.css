@@ -1,0 +1,379 @@
+html {
+  background:linear-gradient(30deg, rgb(33, 116, 109), rgb(5, 64, 126));
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  font-size: 14px;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  font-size: 1.75rem;
+  color: #fff;
+  display:flex;
+  flex:1;
+  min-height: 100vh;
+  align-items: center;
+}
+
+#greeting {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  width: 80%;
+}
+#init-greet-message {
+  font-size: 250%;
+  margin: 0 20px 0 0;
+  display:block; /*init: block, norm: inline-block*/ 
+}
+#return-greet-message {
+  font-size: 250%;
+  margin: 0 20px 0 0;
+  display:none; /*init: block, norm: inline-block*/ 
+}
+
+.greet-input {
+  display: inline-block; /*init: inline-block, norm: none*/
+  width: 30%;
+  height: 5rem;
+  font-size: 5rem;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid #fff;
+  outline: none;
+}
+
+.greet-output {
+  display: none; /*init: none, norm: inline-block*/
+  font-size: 5rem;
+  color: #fff;
+  text-align: center;
+  height: 6rem;
+  margin: 0;
+}
+
+#submit-name {
+  display: block;
+  margin: 50px auto;
+  padding: .5rem 2rem;
+  font-size: 3rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: rgb(20, 101, 116);
+  border: 2px solid rgb(155, 211, 204);
+  border-radius: .5rem;
+  box-shadow: 0 2px 4px rgba(8, 45, 51, 0.8);;
+  outline: none;
+  transition: all 0.05s;
+}
+#submit-name:active {
+  color: rgb(241, 241, 241);
+  background-color: rgb(16, 86, 99);
+  border: 2px solid rgb(202, 243, 238);
+  border-radius: .5rem;
+  box-shadow: 0 2px 4px rgba(8, 45, 51, 0.3);;
+  outline: none;
+}
+
+#edit-name {
+  position: absolute;
+  top: 2%;
+  left: 2%;
+}
+#edit-btn {
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+  font-size: 70%;
+  font-weight: 400;
+  transition: all 0.2s;
+  z-index: 5000;
+}
+
+#edit-input {
+  display: block; 
+  position: absolute;
+  width: 0;
+  top: 100%;
+  left: 0;
+  font-size: 100%;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #fff;
+  outline: none;
+  transition: all 0.2s;
+}
+
+#edit-input.open {
+  width: 300%;
+}
+
+
+#confirm {
+  position: absolute;
+  top: 95%;
+  left: 0;
+  font-size: 95%;
+  opacity: 0; 
+  transition: all 0.2s;
+  z-index: 1000;
+}
+#confirm:hover {
+  color: rgb(155, 211, 204);
+}
+
+.clock {
+  display: none; /*init: none, norm: block*/
+  width: 30rem;
+  height: 30rem;
+  border:23px solid #fff;
+  border-radius:50%;
+  margin:50px auto;
+  position: relative;
+  padding:2rem;
+  box-shadow:
+    0 0 0 4px rgba(73, 73, 73, 0.1),
+    inset 0 0 0 3px rgb(171, 219, 216),
+    inset 0 0 10px rgb(182, 182, 182),
+    0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.clock-face {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  transform: translateY(-3px); /* account for the height of the clock hands */
+}
+
+.hand {
+  width:53%;
+  height:7px;
+  background:rgb(29, 29, 29);
+  position: absolute;
+  top:49%;
+  left: -3%;
+  border-radius: 3px;
+  transform-origin: 100%; /* this prop determines the pivot point of the element to be rotated at. super cool! :) 
+  0% would be full left 
+  100% would be full right
+  */
+  transform: rotate(90deg); 
+  transition: all 0.05s;
+  z-index: 40;
+
+}
+
+.second-hand {
+  width: 53%;
+  left: -3%;
+  height: 5px;
+  z-index: 60;
+  transition-timing-function: cubic-bezier(0.1, 2.37, 0.37, 1);
+}
+.hour-hand {
+  width: 40%;
+  left: 10%;
+  height: 7px;
+  z-index: 60;
+  transition-timing-function: cubic-bezier(0.1, 2.37, 0.37, 1);
+}
+
+.clock-center {
+  position: absolute;
+  background-color: rgb(4, 34, 43);
+  width: 11%;
+  height: 11%;
+  top: 44%;
+  left: 44%;
+  border-radius: 50%;
+  z-index: 1050;
+}
+
+.clock-middle {
+  position: absolute;
+  border: 14px solid rgb(5, 64, 71);
+  width: 23%;
+  height: 23%;
+  top: 35%;
+  left: 35%;
+  border-radius: 50%;
+  z-index: 30;
+}
+.circle-1 {
+  position: absolute;
+  border: 11px solid rgb(26, 114, 119);
+  width: 33%;
+  height: 33%;
+  top: 30%;
+  left: 33%;
+  border-radius: 50%;
+  z-index: 30;
+}
+.circle-2 {
+  position: absolute;
+  border: 9px solid rgb(46, 148, 134);
+  width: 46%;
+  height: 46%;
+  top: 22%;
+  left: 23%;
+  border-radius: 50%;
+  z-index: 30;
+}
+.circle-3 {
+  position: absolute;
+  border: 9px solid rgb(96, 184, 172);
+  width: 59%;
+  height: 59%;
+  top: 19%;
+  left: 19%;
+  border-radius: 50%;
+  z-index: 30;
+}
+.circle-4 {
+  position: absolute;
+  border: 8px solid rgb(155, 211, 204);
+  width: 70%;
+  height: 70%;
+  top: 13%;
+  left: 11%;
+  border-radius: 50%;
+  z-index: 30;
+}
+.circle-5 {
+  position: absolute;
+  border: 8px solid rgb(214, 238, 235);
+  width: 84%;
+  height: 84%;
+  top: 5%;
+  left: 9%;
+  border-radius: 50%;
+  z-index: 30;
+}
+.circle-6 {
+  position: absolute;
+  border: 8px solid rgb(255, 255, 255);
+  width: 100%;
+  height: 100%;
+  top: -5%;
+  left: -5%;
+  border-radius: 50%;
+  z-index: 30;
+}
+
+.time {
+  display: none;  /*init: none, norm: block*/
+  position: absolute;
+  width: 100%;
+  top: 70%;
+  font-size: 320%;
+  text-align: center;
+}
+
+@media screen and (max-width: 425px){
+  html {
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+  #greeting {
+    top: 10%;
+  }
+  #init-greet-message {
+    font-size: 130%;
+    margin: 0;
+    display:block; /*init: block, norm: inline-block*/ 
+  }
+  #return-greet-message {
+    font-size: 130%;
+    margin: 0;
+    display: none; /*init: block, norm: inline-block*/ 
+  }
+  .greet-input {
+    width: 80%;
+    margin-top: 30px;
+    height: 3.5rem;
+    font-size: 3rem;
+    font-weight: 600;
+  }
+  .greet-output {
+    display: none; /*init: none, norm: inline-block*/
+    font-size: 3rem;
+    color: #fff;
+    text-align: center;
+    height: 3.5rem;
+    margin: 0;
+  }
+
+
+  #edit-name {
+    position: absolute;
+    top: 0;
+    left: 5%;
+  }
+  #edit-btn {
+    text-decoration: none;
+    color: #fff;
+    font-size: 70%;
+    font-weight: 400;
+    transition: all 0.2s;
+  }
+
+  #edit-btn-content i {
+    transform: rotate(90deg);
+  }
+  
+  #edit-input {
+    display: block; 
+    position: absolute;
+    width: 0;
+    top: 23%;
+    left: 150%;
+    font-size: 80%;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #fff;
+    outline: none;
+    transition: all 0.2s;
+  }
+  
+  #edit-input.open {
+    width: 1650%;
+  }
+  
+  
+  #confirm {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    font-size: 95%;
+    opacity: 0; 
+    transition: all 0.2s;
+    z-index: 1000;
+  }
+  #confirm:hover {
+    color: rgb(155, 211, 204);
+  }
+
+
+
+
+  .clock {
+    width: 18rem;
+    height: 18rem;
+    margin-top: 80px;
+  }
+
+  .time {
+    top: 80%;
+    font-size: 200%; 
+  }
+}

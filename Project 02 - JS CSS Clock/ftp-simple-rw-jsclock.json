@@ -1,0 +1,13 @@
+[
+	{
+		"name": "techtronix server",
+		"host": "107.180.51.25",
+		"port": 21,
+		"type": "ftp",
+		"username": "techtronixweb",
+		"password": "Arianna6110!",
+		"path": "/public_html/rabbitWerks/javascript30/jsclock",
+		"autosave": true,
+		"confirm": true
+	}
+]
