@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <meta name="author" content="sean becker - RabbitWerks.js">
+  <meta name="description" content="Javascript30 Project 01 - JS Drumkit Amen Break Edition with basslines!">
+  <meta name="keywords" content="techtronix web, javascript, 30, rabbitwerks, sean becker, js drumkit, web design, development, programming, minneapolis, saint paul, minnesota, js, web development, developer, coding">
+
+  <title>JS Drum Kit</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+  <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#03a9ac">
+  <link rel="shortcut icon" href="favicon/favicon.ico">
+  <meta name="apple-mobile-web-app-title" content="RabbitWerks">
+  <meta name="application-name" content="RabbitWerks">
+  <meta name="msapplication-TileColor" content="#0a0a0a">
+  <meta name="msapplication-config" content="favicon/browserconfig.xml">
+  <meta name="theme-color" content="#0a0a0a">
+
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+
+  <div class="titles">
+    <h1 id="header">jsDrumKit</h1>
+    <h3 id="sub-header">amen break edition</h3>
+  </div>
+  
+  <div id="drumkit">
+    <div class="keys">
+      <!-- LEFT KEYS ASDF -->
+      <div data-key="65" class="key drum">
+        <kbd>A</kbd>
+        <div class="sound">snare 1</div>
+      </div>
+      <div data-key="83" class="key drum">
+        <kbd>S</kbd>
+        <div class="sound">snare 2</div>
+      </div>
+      <div data-key="68" class="key drum">
+        <kbd>D</kbd>
+        <div class="sound">snare acc</div>
+      </div>
+      <div data-key="70" class="key drum">
+        <kbd>F</kbd>
+        <div class="sound">g-snare</div>
+      </div>
+      
+      <!-- RIGHT KEYS HJKL -->
+      <div data-key="72" class="key drum">
+        <kbd>H</kbd>
+        <div class="sound">Kick</div>
+      </div>
+      <div data-key="74" class="key drum">
+        <kbd>J</kbd>
+        <div class="sound">g-kick</div>
+      </div>
+      <div data-key="75" class="key drum">
+        <kbd>K</kbd>
+        <div class="sound">hi hat</div>
+      </div>
+      <div data-key="76" class="key drum">
+        <kbd>L</kbd>
+        <div class="sound">crash</div>
+      </div>
+    </div>
+  </div>      <!-- /.drumkit -->
+
+
+  <div id="basslines">
+    <div class="basslineKeys">
+
+      <div data-key="49" class="key bassline">
+        <kbd>1</kbd>
+        <div class="sound">bassline 1</div>
+      </div>
+      <div data-key="50" class="key bassline">
+        <kbd>2</kbd>
+        <div class="sound">bassline 2</div>
+      </div>
+      <div data-key="51" class="key bassline">
+        <kbd>3</kbd>
+        <div class="sound">bassline 3</div>
+      </div>
+
+    </div>
+  </div>
+  
+  <!--drumkit samples-->
+  <audio src="sounds/snare-1.wav" data-key="65" class="drum-sample"></audio>
+  <audio src="sounds/snare-2.wav" data-key="83"></audio>
+  <audio src="sounds/snare-acc.wav" data-key="68"></audio>
+  <audio src="sounds/snare-ghost.wav" data-key="70"></audio>
+
+  <audio src="sounds/kick.wav" data-key="72"></audio>
+  <audio src="sounds/ghost-kick.wav" data-key="74"></audio>
+  <audio src="sounds/hi-hat.wav" data-key="75"></audio>
+  <audio src="sounds/crash.wav" data-key="76"></audio>
+
+  <!--bassline samples-->
+  <audio src="sounds/reesebass-1.wav" data-key="49" class="bass1"></audio>
+  <audio src="sounds/reesebass-2.wav" data-key="50" class="bass2"></audio>
+  <audio src="sounds/reesebass-3.wav" data-key="51" class="bass3"></audio>
+ 
+  <script src="app.js"></script>
+</body>
+</html>
