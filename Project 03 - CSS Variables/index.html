@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+  <meta name="author" content="RabbitWerks Javascript Development">
+  <meta name="description" content="CSS Variables - Javascript30 Project 03">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+  <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#03a9ac">
+  <link rel="shortcut icon" href="favicon/favicon.ico">
+  <meta name="apple-mobile-web-app-title" content="RabbitWerks">
+  <meta name="application-name" content="RabbitWerks">
+  <meta name="msapplication-TileColor" content="#0a0a0a">
+  <meta name="msapplication-config" content="favicon/browserconfig.xml">
+  <meta name="theme-color" content="#0a0a0a">
+  <title>CSS Variables</title>
+  <link rel="stylesheet" href="./main.css">
+  <link rel="stylesheet" href="./media-queries.css">
+  <link rel="stylesheet" href="./custom-range.css">
+  <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+</head>
+<body>
+  <div class="navbar">
+    <div class="navbar-brand"><a href="http://rabbitwerks.techtronixweb.com/projects-ui.html"><img src="./img/rw-brand-nav.svg" alt=""></a></div>
+    <div class="project-title">Project 03: CSS Variables and Javascript</div>
+  </div>
+  <h1>Update CSS Variables with <span class='hl'>Javascript</span></h1>
+
+  <div class="controls">
+    
+    <div class="page-color-controls">
+      
+      <div class="page-color-input">
+        <label for="bg-start">Gradient Start</label>
+        <input type="color" id="bg-start" name="bgStartColor" value="#006473">
+      </div>
+
+      <div class="page-color-input">
+        <label for="direction-select">Gradient Direction</label>
+        <select name="direction" id="direction-select">
+          <option value="to top">Up</option>
+          <option value="to bottom">Down</option>
+          <option value="to left">Left</option>
+          <option value="to right">Right</option>
+        </select>
+      </div>
+      
+      <div class="page-color-input">
+        <label for="bg-end">Gradient End</label>
+        <input type="color" id="bg-end" name="bgEndColor" value="#00D6A4">
+      </div>
+      
+      <div class="page-color-input">
+        <label for="base">Base Color</label>
+        <input id="base" type="color" name="base" value="#212121">
+      </div>
+
+      <div class="page-color-input">
+        <label for="spacing">Border-Size:</label>
+        <input id="spacing" type="range" name="spacing" min="0" max="25" value="10" data-sizing="px">
+      </div>
+      
+    </div>
+      
+    <div class="photo-filter-controls">
+      
+      <div class="filter">
+        <label for="contrast">Contrast:</label>
+        <input id="contrast" type="range" name="contrast" min="0" max="300" value="100" data-sizing="%">
+      </div>
+      
+      <div class="filter">
+        <label for="saturate">Saturate:</label>
+        <input id="saturate" type="range" name="saturate" min="80" max="300" value="100" data-sizing="%">
+      </div>
+
+      <div class="filter">
+        <label for="hue-rotate">Hue Rotate:</label>
+        <input id="hue-rotate" type="range" name="hueRotate" min="0" max="360" value="0" data-sizing="deg">
+      </div>
+      
+      <div class="filter">
+        <label for="invert">Invert:</label>
+        <input id="invert" type="range" name="invert" min="0" max="100" value="0" data-sizing="%">
+      </div>
+      
+      <div class="filter">
+        <label for="sepia">Sepia:</label>
+        <input id="sepia" type="range" name="sepia" min="0" max="100" value="0" data-sizing="%">
+      </div>
+
+      <button class="reset-button" id="reset-desktop-btn">Reset Filters</button>
+    </div>
+
+  </div>
+
+  <img id="current-image" src="http://res.cloudinary.com/rabbitwerks-js/image/upload/c_scale,q_auto:best,w_1000/c_crop,h_600,q_auto:best,w_1000/v1535767057/javascript30/project-03/pietro-de-grandi-329892-unsplash.jpg">
+
+  <button class="reset-button" id="reset-mobile-btn">Reset Filters</button>
+
+  <div class="image-picker">
+    <img class="thumbnail" src="http://res.cloudinary.com/rabbitwerks-js/image/upload/c_scale,q_auto:best,w_1000/c_crop,h_600,q_auto:best,w_1000/v1535767057/javascript30/project-03/pietro-de-grandi-329892-unsplash.jpg">
+
+    <img class="thumbnail" src="http://res.cloudinary.com/rabbitwerks-js/image/upload/c_scale,q_auto:best,w_1000/c_crop,h_600,q_auto:best,w_1000/v1535767057/javascript30/project-03/martin-jernberg-197949-unsplash.jpg" alt="">
+
+    <img class="thumbnail" src="http://res.cloudinary.com/rabbitwerks-js/image/upload/c_scale,q_auto:best,w_1000/c_crop,h_600,q_auto:best,w_1000/v1535767051/javascript30/project-03/bailey-zindel-396398-unsplash.jpg" alt="">
+
+    <img class="thumbnail" src="http://res.cloudinary.com/rabbitwerks-js/image/upload/c_scale,q_auto:best,w_1000/c_crop,h_600,q_auto:best,w_1000/v1535767036/javascript30/project-03/david-marcu-4654-unsplash.jpg" alt="">
+
+    <img class="thumbnail" src="http://res.cloudinary.com/rabbitwerks-js/image/upload/c_scale,q_auto:best,w_1000/c_crop,h_600,q_auto:best,w_1000/v1535767034/javascript30/project-03/jeremy-bishop-527439-unsplash.jpg" alt="">
+
+    <img class="thumbnail" src="http://res.cloudinary.com/rabbitwerks-js/image/upload/c_scale,q_auto:best,w_1000/c_crop,h_600,q_auto:best,w_1000/v1535767032/javascript30/project-03/johannes-plenio-629984-unsplash.jpg" alt="">
+
+  </div>
+
+<script src="./app.js"></script>
+</body>
+</html>
