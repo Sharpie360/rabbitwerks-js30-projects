@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Array Cardio Day 1</title>
+  <link rel="stylesheet" href="darkly-bootswatch-css/bootstrap.css">
+  <link rel="stylesheet" href="icons/css/all.css">
+  <link rel="stylesheet" href="main.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+  <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#03a9ac">
+  <link rel="shortcut icon" href="favicon/favicon.ico">
+  <meta name="apple-mobile-web-app-title" content="RabbitWerks">
+  <meta name="application-name" content="RabbitWerks">
+  <meta name="msapplication-TileColor" content="#0a0a0a">
+  <meta name="msapplication-config" content="favicon/browserconfig.xml">
+  <meta name="theme-color" content="#0a0a0a">
+</head>
+<body>
+  <nav class="navbar">
+    <a class="navbar-brand" href="http://rabbitwerks.techtronixweb.com/projects-ui.html"><img src="img/rw-brand-nav.svg" width="285" height="48" alt="font logo"></a>
+
+    <div class="navbar-nav float-right">
+      <a href="#" class="nav-item nav-link">
+      <h5 id="project-title">Javascript30 Project 04: Array Cardio Day 1</h5>
+      </a>
+    </div>
+    <img src="img/rabbitwerks-logo-transparent-1000px.svg" alt="" id="rw-logo-nav">
+  </nav>
+  <div class="container">
+    <div class="card card-body mt-5">
+      <!-- <h4 id="view-profile" class="text-right"><a href="profile.html">View Xbox Profile</a></h4> -->
+      <h1 class="card-title display-3" id="title-header"><i class="fab fa-xbox mr-3" id="xbox-icon"></i>Xbox One Achievements</h1>
+      <div class="holder mb-3">
+        <button class="btn btn-success mt-3" id="getGameData"><h4>Grab Xbox Games</h4></button>
+        <button class="btn btn-outline-success mt-3" id="fullList"><h4>Full List</h4></button>
+      </div>
+      
+
+      <div class="row" id="array-controls">
+          <div class="control-box" id="filter-box">
+            <h4 class="box-title"> Filter Array</h4>
+            <button id="filter-btn-inProgress" class="btn btn-outline-success">In Progress</button>
+            <button id="filter-btn-completed" class="btn btn-outline-success">Completed</button>
+          </div>
+        
+        <div class="control-box" id="map-box">
+          <h4 class="box-title"> Map Array</h4>
+          <button id="map-btn-gs-remain" class="btn btn-outline-success">GS To Go</button>
+          <button id="map-btn-last-unlock" class="btn btn-outline-success">Last Unlock</button>
+        </div>
+
+        <div class="control-box" id="sort-box">
+          <h4 class="box-title"> Sort Array</h4>
+          <button id="sort-btn-by-my-gs" class="btn btn-outline-success">By My GS</button>
+          <button id="sort-btn-by-max-gs" class="btn btn-outline-success">By Max GS</button>
+        </div>
+
+        <div class="control-box" id="reduce-box">
+          <h4 class="box-title"> Reduce Array</h4>
+          <button id="reduce-my-total" class="btn btn-outline-success">My Total</button>
+          <button id="reduce-max-total" class="btn btn-outline-success">Max Total</button>
+        </div>
+        
+      </div>
+      <ul class="list-group">
+        <li class="list-group-item">Your games and achievements will load here...</li>
+      </ul>
+    </div>
+  </div>
+  <script src="app.js"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115157918-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-115157918-3');
+</script>
+
+</body>
+</html>

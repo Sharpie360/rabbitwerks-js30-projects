@@ -1,0 +1,143 @@
+html, body {
+  height: 100%;
+  font-size: 18px;
+}
+
+.navbar {
+  background-color: #0a0a0a;
+  height: 80px;
+}
+
+.navbar img {
+  margin-left: .5em;
+}
+
+#project-title {
+  color: #03A9AC;
+  margin-right: .5em;
+}
+#rw-logo-nav {
+  display: none;
+}
+
+.container {
+  max-width: 1440px;
+}
+
+#view-profile {
+  margin-bottom: -1.5em;
+}
+
+.card-title i {
+  transition: all .75s;
+}
+#getGameData {
+  position: relative;
+}
+button h4 {
+  display: inline-block;
+  margin-top: .25em;
+}
+
+#spin-loader {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.1s;
+}
+
+#array-controls {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+
+  padding: 15px;
+}
+
+.control-box {
+  width: 100%;
+  height: 80px;
+}
+.control-box button {
+  width: 45%;
+  display: inline-block;
+  margin: 0 .25em;
+}
+
+#array-controls > button {
+  width: 40%;
+
+}
+
+.holder {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+#getGameData {
+  grid-column: 1 / 2;
+}
+#fullList {
+  grid-column: 3 / 4;
+}
+
+/*GENERATED LIST ITEM STYLING*/
+
+#viewAchvs {
+  position: absolute;
+  top: 10%;
+  right: 1.5%;
+
+}
+
+
+
+@media screen and (max-width: 480px) {
+  html, body {
+    font-size: 14px;
+  }
+  .navbar-brand {
+    margin: 0 auto;
+  }
+  #project-title {
+    display: none;
+  }
+  #title-header {
+    text-align: center;
+    font-size: 320%;
+  }
+
+  
+
+  #array-controls {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+  
+    padding: 12px;
+  }
+  
+  #array-controls > button {
+    width: 80%;
+  }
+
+  
+  
+  #getGameData {
+    width: 100%;
+  }
+  #fullList {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  #viewAchvs {
+    display: none;
+    position: absolute;
+    top: 46%;
+    right: 8%;
+  
+  }
+}
